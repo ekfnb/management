@@ -49,7 +49,7 @@
   "compileType": "miniprogram",
   "libVersion": "2.19.4",
   "appid": "wx3688519ee7756021",
-  "projectname": "校园规划管理平台",
+  "projectname": "managementMini",
   "debugOptions": {
     "hidedInDevtools": []
   },
