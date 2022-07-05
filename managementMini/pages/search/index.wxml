@@ -1,22 +1,17 @@
 <view class="main">
-    <!--搜索模块-->
+    <!-- 搜索模块 -->
     <view class="query_nav">
         <view class="queryInput">
-            <input bindinput="getInput" type="text" placeholder="请输入项目名称搜索"></input>
+            <input bindinput="getInput" type="text" confirm-type='search' placeholder="请输入项目名"></input>
         </view>
-        <view class="queryBut">
+        <!-- <view class="queryBut">
             <button bindtap="querys" style="width:unset;height:70rpx;">
                 <image src="../../icom/query.png"></image>
             </button>
-        </view>
+        </view> -->
     </view>
-    <!--项目列表-->
-    <view class="content" 
-        bindtap="handlerURL" 
-        bindinput = "handlerTitle"
-        wx:for="{{handlerQueryData}}"
-        data-is_step = "{{item.is_step}}"
-        data-id="{{item.id}}">
+    <!-- 项目列表 -->
+    <view class="content" bindtap="handlerURL" bindinput="handlerTitle" wx:for="{{handlerQueryData}}" data-is_step="{{item.is_step}}" data-id="{{item.id}}">
         <view class="project_list">
             <view class="project-img">
                 <image mode="widthFix" wx:if="{{item.user_pic}}" src="{{item.user_pic}}"></image>
