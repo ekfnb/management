@@ -1,4 +1,4 @@
-export const URL = 'http://192.168.1.8:3009'
+export const URL = 'http://192.168.1.4:3009'
 //定义计算请求数据
 // let ajaxTimec = 0;
 export const request=(params)=>{
