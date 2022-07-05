@@ -8,51 +8,64 @@ Page({
   },
   onLoad: function (options) {
   },
+  //监听input框
   getInput:function(e)
   {
     this.setData({
       inputValue: e.detail.value
     })
+    this.AntiShake(this.querys,1000)
   },
   //搜索功能处理方法
-  querys:function(e){
+  querys(){
     const name = this.data.inputValue
     request({url:'/my/query/fuzzy_query',
     data:{name},
     header:{"Content-Type": "application/x-www-form-urlencoded"},
-    method:"post"}).then(res=>{
+      method: "post"
+    }).then(res => {
       const getDataArr = res.data.data
       //将二维数组转换为一维数组
-      const trimData = getDataArr.reduce(function(a,b){return a.concat(b)})
-      for(var k in trimData){
-        var date = new Date(trimData[k].dates).toJSON()
-        var createTime = new Date(+new Date(date) + 8 * 3600 * 1000)
-          .toISOString().replace(/T/g, '--').replace(/\.[\d]{3}Z/, '')
-        trimData[k].dates = createTime
-        if (trimData[k].user_pic === null) {
-          trimData[k].user_pic = '../../icom/no_img.png'
-        }else{
-          trimData[k].user_pic = URL + trimData[k].user_pic
+      if (getDataArr !== undefined) {
+        const trimData = getDataArr.reduce(function(a,b){return a.concat(b)})
+        for(var k in trimData){
+          var date = new Date(trimData[k].dates).toJSON()
+          var createTime = new Date(+new Date(date) + 8 * 3600 * 1000)
+            .toISOString().replace(/T/g, '--').replace(/\.[\d]{3}Z/, '')
+          trimData[k].dates = createTime
+          if (trimData[k].user_pic === null) {
+            trimData[k].user_pic = '../../icom/no_img.png'
+          }else{
+            trimData[k].user_pic = URL + trimData[k].user_pic
+          }
         }
+        for(var i in trimData){
+          if (trimData[i].is_step === 5) {
+            trimData[i].province="项目发布"
+          }
+          if (trimData[i].is_step === 6) {
+            trimData[i].province="待审核项目"
+          }
+          if (trimData[i].is_step === 7) {
+            trimData[i].province="审核成功项目"
+          }
+          if (trimData[i].is_step === 8) {
+            trimData[i].province="审核失败项目"
+          }
+        }
+        this.setData({
+          handlerQueryData:trimData
+        })
       }
-      for(var i in trimData){
-        if (trimData[i].is_step === 5) {
-          trimData[i].province="项目发布"
-        }
-        if (trimData[i].is_step === 6) {
-          trimData[i].province="待审核项目"
-        }
-        if (trimData[i].is_step === 7) {
-          trimData[i].province="审核成功项目"
-        }
-        if (trimData[i].is_step === 8) {
-          trimData[i].province="审核失败项目"
-        }
-      }
-      this.setData({
-        handlerQueryData:trimData
-      })
     })
+  },
+  //搜索框防抖
+  AntiShake(demo,dates) {
+    var timer = null
+      if (timer) {
+        clearTimeout(timer)
+      }
+      timer = setTimeout(demo, dates)
   },
   //列表点击跳转页面路由处理函数
   handlerURL:function(e){
