@@ -1,0 +1,62 @@
+<view class="main">
+    <!-- 项目信息详情模块-->
+    <view class="details_content" wx:for="{{detailsList}}" wx:key="item.id">
+        <view class="details_title">{{item.name}}</view>
+        <view class="details_alias">{{item.alias}}</view>
+        <view class="details_alias"><image mode="widthFix" src="{{item.user_pic}}"></image></view>
+        <rich-text nodes="{{item.articleContent}}" class="details_text"></rich-text>
+        <view class="details_date">
+            <text class="dates">{{item.dates}}</text>
+            <text class="details_date_title">发布时间：</text>
+        </view>
+    </view>
+    <!--创建用户建议发布模块textarea-->
+    <view class="make_recommendations">
+        <text class="recom_title">发表您的观点：</text>
+        <form bindsubmit='fabiao'>
+            <view class='evaluation_concent'>
+                <textarea maxlength="500" class="text" bindblur="bindRecomText" placeholder="请发表您的建议..."></textarea>
+            </view>
+            <button form-type="submit" style="width: 28vmin;height: 8vmin;">发表建议</button>
+        </form>
+    </view>
+    <!-- 个人用户建议信息 -->
+    <view class="personal_advice_content">
+        <view class="personal_advice_title">
+            <image mode="widthFix" src="../../icom/biaoti1.png"></image>
+        </view>
+        <view class="info_content" wx:for="{{personalAdvice}}" wx:key="id">
+            <view class="user_info">
+                <view class="user_pic">
+                    <image wx:if='{{item.user_pic}}' src="{{item.user_pic}}"></image>
+                </view>
+                <view class="user_content">
+                    <text>{{item.nickName}}</text>
+                    <view class="remove_proposal" bindtap="removePersonalAdvice" data-id="{{item.id}}">
+                        <image mode="widthFix" src="../../icom/delect.png"></image>
+                    </view>
+                </view>
+            </view>
+            <view class="proposal_list">{{item.proposal}}</view>
+            <view class="proposal_date">{{item.dates}}</view>
+        </view>
+    </view>
+    <!--所有用户建议信息-->
+    <view class="release_info">
+        <view class="release_title">
+            <image mode="widthFix" src="../../icom/biaoti2.png"></image>
+        </view>
+        <view class="info_content" wx:for="{{proposalInfo}}" wx:key="id">
+            <view class="user_info">
+                <view class="user_pic">
+                    <image wx:if='{{item.user_pic}}' src="{{item.user_pic}}"></image>
+                </view>
+                <view class="user_content">
+                    <text>{{item.nickName}}</text>
+                </view>
+            </view>
+            <view class="proposal_list">{{item.proposal}}</view>
+            <view class="proposal_date">{{item.dates}}</view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,32 @@
+.main{
+    width: 90%;
+    margin: 0 auto;
+}
+.details_content{
+    width: 100%;
+}
+.details_title{
+    text-align: center;
+    font-size: 50rpx;
+    font-weight: bold;
+}
+.details_alias{
+    margin-top: 20rpx;
+    text-align: center;
+    color: #666;
+}
+.details_text{
+    display: block;
+    line-height: 50rpx;
+}
+.details_date{
+    margin-top: 10rpx;
+    width: 100%;
+    color: #999;
+}
+.details_date_title{
+    float: right;
+}
+.dates{
+    float: right;
+}

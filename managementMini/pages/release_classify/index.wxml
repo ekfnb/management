@@ -1,0 +1,23 @@
+<SearchInput></SearchInput>
+<view class="main">
+    <!-- 头部标题 -->
+    <view class="pro_title">{{region}}</view>
+    <view class="title_img">
+        <image mode="widthFix" src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fseopic.699pic.com%2Fphoto%2F50088%2F9764.jpg_wh1200.jpg&refer=http%3A%2F%2Fseopic.699pic.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1648208150&t=ecf56c818b5815d20db1c6a03e0bf1e3"></image>
+    </view>
+    <!-- 内容列表 -->
+    <view class="project_content">
+        <navigator class="project_list"
+        wx:for="{{dynamicList}}"
+        wx:key="id"
+        url="../../pages/release_details/index?cid={{item.id}}">
+            <view class="project-img">
+                <image mode="widthFix" src="{{item.user_pic}}"></image>
+            </view>
+            <view class="project-title">
+                <text>{{item.name}}（{{item.alias}}）</text>
+                <view class="dynamic-date">{{item.dates}}</view>
+            </view>
+        </navigator> 
+    </view>
+</view>

@@ -1,0 +1,86 @@
+/* pages/project_details/index.wxss */
+.main{
+    width: 90%;
+    margin: 0 auto;
+}
+/* 项目信息详情样式 */
+.details_content{
+    width: 100%;
+}
+.details_title{
+    text-align: center;
+    font-size: 50rpx;
+    font-weight: bold;
+}
+.details_alias{
+    margin-top: 20rpx;
+    text-align: center;
+    color: #666;
+}
+.details_text{
+    display: block;
+    line-height: 50rpx;
+}
+.details_date{
+    width: 100%;
+    color: #999;
+    
+}
+.details_date_title{
+    float: right;
+}
+.dates{
+    float: right;
+}
+/* 用户投票模块样式 */
+.election_content{
+    margin: 0 auto;
+    margin-top: 60rpx;
+    width: 100%;
+    border-top: 2rpx solid #ccc;
+}
+.election_title{
+    margin-top: 10rpx;
+    font-size: 35rpx;
+    width: 100%;
+}
+.election{
+    width: 100%;
+    margin-top: 20rpx;
+}
+.release button,.fail button{
+    font-size: 16rpx;
+    font-weight: normal;
+    float: right;
+    background-color: #fff;
+    color: var(--themeColor);
+}
+.results{
+    width: 100%;
+    margin-top: 150rpx;
+}
+.release_results,.fail_results{
+    font-size: 42rpx;
+    color: var(--themeColor);
+    display: flex;
+}
+.release_img{
+    width: 60rpx;
+}
+.img{
+    width: 39rpx;
+    margin: 0 auto;
+}
+.release_img{
+    flex: 1;
+    margin-right: 20rpx;
+}
+.result_text{
+    flex: 11;
+}
+.recollections{
+    width: 100%;
+    text-align: center;
+    color: red;
+    font-size: 35rpx;
+}

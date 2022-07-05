@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+  "image-cropper": "../../components/image-cropper-master/src/image-cropper"
+ },
+ "navigationBarTitleText": "更换头像",
+ "disableScroll": true
+}

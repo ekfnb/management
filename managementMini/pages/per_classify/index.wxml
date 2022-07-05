@@ -1,0 +1,19 @@
+<SearchInput></SearchInput>
+<view class="main">
+    <Introduce></Introduce>
+    <view class="header">————— {{region}} —————</view>
+    <view class="project_content">
+        <navigator class="project_list"
+        wx:for="{{dynamicList}}"
+        wx:key="id"
+        url="../../pages/project_details/index?cid={{item.id}}">
+            <view class="project-img">
+                <image mode="widthFix" wx:if='{{item.user_pic}}' src="{{item.user_pic}}"></image>
+            </view>
+            <view class="project-title">
+                <text>{{item.name}}（{{item.alias}}）</text>
+                <view class="dynamic-date">{{item.dates}}</view>
+            </view>
+        </navigator> 
+    </view>
+</view>

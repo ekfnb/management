@@ -1,0 +1,14 @@
+<view class="personal_info">
+    <view class="info_title">个人信息</view>
+    <view class="info_list">
+    <view class="user"><text>头像：</text><image src="{{userInfo.user_pic}}"></image></view>
+        <view><text>账号：</text><text class="information">{{userInfo.username}}</text></view>
+        <view><text>用户名：</text><text class="information">{{userInfo.nickname}}</text></view>
+        <view><text>邮箱：</text><text class="information">{{userInfo.email}}</text></view>
+    </view>
+    <view class="modify_info">
+        <button  bindtap="modifyInfo" style="width:260rpx;margin-bottom:20rpx;">修改用户信息</button>
+        <button  bindtap="switchAccountBut" style="width:260rpx;">切换账号</button>
+    </view>
+</view>
+<!--url="../../pages/login/index"-->

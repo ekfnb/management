@@ -1,0 +1,76 @@
+
+.container{
+    width: 100%;
+}
+.index_swiper swiper{
+    width: 100%;
+    height: 420rpx;
+}
+.index_swiper swiper image{
+    width: 100%;
+}
+.nav{
+    margin-top: 30rpx;
+    display: flex;
+    border-bottom: 1rpx solid var(--themeColor);
+    padding-bottom: 10rpx;
+    color: var(--themeColor);
+}
+.Anticipate,.vote, .release{
+    display: flex;
+    flex: 1;
+    align-content: center;
+    justify-content:center;
+    font-size: 28rpx;
+}
+.vote,.release{
+    border-left: 1rpx solid #eee;
+}
+/* 投票成功模板样式 */
+.project-dynamics{
+    
+    width: 95%;
+    margin: 0 auto;
+}
+.project-dynamics-title{
+    font-size: 39rpx;
+    padding: 20rpx 0;
+}
+.project-dynamics-content{
+    width: 100%;
+    margin: 0 auto;
+    /* border: 2rpx solid #ecf0f1; */
+    box-shadow: 0rpx 10rpx 12rpx 5rpx rgba(85, 85, 85, 0.20);
+    border-radius: 12rpx;
+    display: flex;
+    height: 180rpx;
+    margin-top: 10rpx;
+    margin-bottom: 40rpx;
+    padding:20rpx;
+    background-color: #fff;
+}
+.img-style{
+    flex: 2;
+    align-content: center;
+    justify-content: center;
+}
+.content-style{
+    flex: 6;
+    position: relative;
+    margin-left: 20rpx;
+}
+.project-name{
+    display: flex;
+    margin-bottom: 20rpx;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+.datas{
+    position: absolute;
+    font-size: 26rpx;
+    color: #ccc;
+    right: 0;
+    bottom: 0;
+}

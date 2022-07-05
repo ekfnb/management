@@ -1,0 +1,12 @@
+<view class="personal_info">
+    <view class="info_title">修改个人信息</view>
+    <view class="info_list">
+        <view><text>头像：</text><image bindtap="userPic" src="{{userInfo.user_pic}}"></image></view>
+        <view><text>账号：</text><input bindblur="username" type="text" value="{{userInfo.username}}"></input></view>
+        <view><text>用户名：</text><input bindblur="nickname" type="text" value="{{userInfo.nickname}}"></input></view>
+        <view><text>邮箱：</text><input bindblur="email" type="text" value="{{userInfo.email}}"></input></view>
+    </view>
+    <view class="modify_info">
+        <button  bindtap="modifyInfo" style="width:260rpx">修改用户信息</button>
+    </view>
+</view>

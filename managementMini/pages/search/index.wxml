@@ -1,0 +1,31 @@
+<view class="main">
+    <!--搜索模块-->
+    <view class="query_nav">
+        <view class="queryInput">
+            <input bindinput="getInput" type="text" placeholder="请输入项目名称搜索"></input>
+        </view>
+        <view class="queryBut">
+            <button bindtap="querys" style="width:unset;height:70rpx;">
+                <image src="../../icom/query.png"></image>
+            </button>
+        </view>
+    </view>
+    <!--项目列表-->
+    <view class="content" 
+        bindtap="handlerURL" 
+        bindinput = "handlerTitle"
+        wx:for="{{handlerQueryData}}"
+        data-is_step = "{{item.is_step}}"
+        data-id="{{item.id}}">
+        <view class="project_list">
+            <view class="project-img">
+                <image mode="widthFix" wx:if="{{item.user_pic}}" src="{{item.user_pic}}"></image>
+            </view>
+        </view>
+        <view class="project-title">
+            <text class="project_type">{{item.province}}</text>
+            <text class="project_name">{{item.name}}（{{item.alias}}）</text>
+            <view class="project-date">{{item.dates}}</view>
+        </view>
+    </view>
+</view>

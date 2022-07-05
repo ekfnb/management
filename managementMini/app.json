@@ -1,0 +1,59 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/login/index",
+    "pages/user/index",
+    "pages/dynamic/index",
+    "pages/search/index",
+    "pages/prepare/index",
+    "pages/election/index",
+    "pages/release/index",
+    "pages/register/index",
+    "pages/fail/index",
+    "pages/project_details/index",
+    "pages/election_details/index",
+    "pages/release_details/index",
+    "pages/fail_details/index",
+    "pages/per_classify/index",
+    "pages/election_classify/index",
+    "pages/release_classify/index",
+    "pages/fail_classify/index",
+    "pages/modify_info/index",
+    "pages/updata_avatar/index",
+    "pages/avatar/index"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#1abc9c",
+    "navigationBarTitleText": "校园规划管理平台",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "icom/shouye.png",
+        "selectedIconPath": "icom/shouye-o.png"
+      },
+      {
+        "pagePath": "pages/dynamic/index",
+        "text": "最新项目",
+        "iconPath": "icom/Category.png",
+        "selectedIconPath": "icom/Category-o.png"
+      },
+      {
+        "pagePath": "pages/user/index",
+        "text": "我的",
+        "iconPath": "icom/yonghu.png",
+        "selectedIconPath": "icom/yonghu-o.png"
+      }
+    ],
+    "color": "#999",
+    "selectedColor":"#1abc9c",
+    "backgroundColor":"rgb(227, 237, 248)",
+    "position":"bottom"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

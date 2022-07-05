@@ -1,0 +1,13 @@
+<view class="main">
+    <!-- 项目信息详情模块-->
+    <view class="details_content" wx:for="{{detailsList}}" wx:key="item.id">
+        <view class="details_title">{{item.name}}</view>
+        <view class="details_alias">{{item.alias}}</view>
+        <view class="details_alias"><image mode="widthFix" wx:if="{{item.user_pic}}" src="{{item.user_pic}}"></image></view>
+        <rich-text nodes="{{item.articleContent}}" class="details_text"></rich-text>
+        <view class="details_date">
+            <text class="dates">{{dates}}</text>
+            <text class="details_date_title">发布时间：</text>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,12 @@
+<view class="introduce">
+    <view class="introduce_title">流程介绍</view>
+    <view class="introduce_content">
+        <text >一、校园规划项目发布\n</text>
+        <text >二、师生可以在此处阅览项目的信息\n</text>
+        <text >三、根据项目的信息提出您宝贵的意见\n</text>
+        <text >四、根据您提供的意见进行修改\n</text>
+        <text >五、发布到投票环节\n</text>
+        <text >六、当投票赞成率高时项目成功\n</text>
+        <text >七、当投票失败率高时项目失败</text>
+    </view>
+</view>

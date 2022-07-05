@@ -1,0 +1,15 @@
+.introduce_title{
+    width: 100%;
+    text-align: center;
+    color: var(--themeColor);
+    margin: 10rpx auto;
+    font-size: 32rpx;
+}
+.introduce{
+    width: 90%;
+    margin: 0 auto;
+}
+.introduce_content{
+    width: 90%;
+    margin: 0 auto;
+}

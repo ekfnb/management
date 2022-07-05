@@ -1,0 +1,5 @@
+.user_pic{
+    width: 80%;
+    margin: 20rpx auto;
+    margin-top: 30%;
+}

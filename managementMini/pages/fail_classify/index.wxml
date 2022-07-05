@@ -1,0 +1,22 @@
+<SearchInput></SearchInput>
+<view class="main">
+    <view class="pro_title">{{region}}</view>
+    <view class="title_img">
+        <image mode="widthFix" src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fdingyue.ws.126.net%2F2019%2F11%2F30%2F30e1030ed434453497e697351e49cacb.jpeg&refer=http%3A%2F%2Fdingyue.ws.126.net&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1648208056&t=27251a2205c48811e6c070c8c8c9e48e"></image>
+    </view>
+    <view class="project_content">
+        <navigator class="project_list"
+        wx:for="{{dynamicList}}"
+        wx:key="id"
+        url="../../pages/fail_details/index?cid={{item.id}}">
+            <view class="project-img">
+                <image mode="widthFix" wx:if="{{item.user_pic}}" src="{{item.user_pic}}"></image>
+            </view>
+            <view class="project-title">
+                <text>{{item.name}}（{{item.alias}}）</text>
+                <view class="dynamic-date">{{item.dates}}</view>
+            </view>
+        </navigator> 
+    </view>
+</view>
+

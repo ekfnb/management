@@ -1,0 +1,17 @@
+<view class="login_title">
+    <view >校园规划管理平台</view>
+    <view >欢迎您登录</view>
+</view>
+<view class="login_form">
+    <view class="regiser_name">
+        <text class="username_reg" decode>帐号：</text><input class="username_login" type="text" bindinput="username" placeholder="请输入用户名"></input>
+    </view>
+    <view class="regiser_name">
+        <text class="username_reg" decode>密码：</text><input class="password_login" type="password" bindinput="password" placeholder="请输入密码"></input>
+    </view>
+    <button class="loginBut" bindtap="loginBut"> 登 录 </button>
+    <button class="loginBut" bindtap="register">用户注册</button>
+</view>
+<view class="logoutBut">
+    <button class="logout" bindtap="logoutBut"> 注销登录 </button>
+</view>

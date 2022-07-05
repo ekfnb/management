@@ -1,0 +1,63 @@
+<!--index.wxml-->
+<view class="container">
+    <SearchInput></SearchInput>
+    <!--轮播图-->
+    <view class="index_swiper">
+        <swiper autoplay indicator-dots circular>
+            <swiper-item 
+            wx:for="{{swiperList}}"
+            wx:key="item.id"
+            >
+                <navigator url="../../pages/project_details/index?cid={{item.id}}">
+                    <image mode="widthFix" wx:if="{{item.user_pic}}" src="{{item.user_pic}}"></image>
+                </navigator>
+            </swiper-item>
+        </swiper>
+    </view>
+    <!--导航模块-->
+    <view class="nav">
+        <view class="Anticipate">
+            <navigator url="../prepare/index">
+                <image mode="widthFix" src="../../icom/mubiao.png"></image>
+                发布项目
+            </navigator>
+        </view>
+        <view class="vote">
+            <navigator url="../election/index">
+                <image mode="widthFix" src="../../icom/toupiao.png"></image>
+                投票选举
+            </navigator>
+        </view>
+        <view class="release">
+            <navigator url="../release/index">
+                <image mode="widthFix" src="../../icom/success.png"></image>
+                成功项目
+            </navigator>
+        </view>
+        <view class="release">
+            <navigator url="../fail/index">
+                <image mode="widthFix" src="../../icom/failed.png"></image>
+                失败项目
+            </navigator>
+        </view>
+    </view>
+    <!--投票成功模块-->
+    <view class="project-dynamics">
+        <view class="project-dynamics-title">
+            最近投票成功项目更新：
+        </view>
+        <navigator class="project-dynamics-content" 
+        wx:for="{{SuccessProject}}" 
+        wx:key="{{item.id}}"
+        url="../release_details/index?cid={{item.id}}"
+        >
+            <view class="img-style">
+                <image mode="widthFix" wx:if="{{item.user_pic}}" src="{{item.user_pic}}"></image>
+            </view>
+            <view class="content-style">
+                <text class="project-name">{{item.name}}（{{item.alias}}）</text>
+                <view class="datas">{{item.dates}}</view>
+            </view>
+        </navigator>
+    </view>
+</view>

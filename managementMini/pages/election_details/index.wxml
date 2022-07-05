@@ -1,0 +1,48 @@
+<view class="main">
+    <!-- 项目信息详情模块-->
+    <view class="details_content" wx:for="{{detailsList}}" wx:key="item.id">
+        <view class="details_title">{{item.name}}</view>
+        <view class="details_alias">{{item.alias}}</view>
+        <view class="details_alias">
+            <image mode="widthFix" wx:if='{{item.user_pic}}' src="{{item.user_pic}}"></image>
+        </view>
+        <rich-text nodes="{{item.articleContent}}" class="details_text"></rich-text>
+        <view class="details_date">
+            <text class="dates">{{dates}}</text>
+            <text class="details_date_title">发布时间：</text>
+        </view>
+    </view>
+    <!-- 用户投票模块 -->
+    <view class="election_content">
+        <view class="election_title">请开始投票：</view>
+        <view class="election">
+            <view class="fail">
+                <button bindtap="failBut" style="width:180rpx"><view class="img"><image mode="widthFix" src="../../icom/buzancheng-o.png"></image></view><text>不赞成{{add_fail}}</text></button>
+            </view>
+            <view class="release">
+                <button bindtap="releaseBut" style="width:160rpx"><view class="img"><image mode="widthFix" src="../../icom/zancheng-o.png"></image></view><text>赞成{{add_release}}</text></button>
+            </view>
+        </view>
+        <view class="results" wx:for="{{vote_result}}" wx:key="item.id">
+            <view class="release_results">
+                <view class="release_img">
+                    <image mode="widthFix" src="../../icom/zancheng-o.png"></image>
+                </view>
+                <view class="result_text">
+                    <text>赞成：</text><text>{{item.success}}票</text>
+                </view>
+            </view>
+            <view class="fail_results">
+                <view class="release_img">
+                    <image mode="widthFix" src="../../icom/buzancheng-o.png"></image>
+                </view>
+                <view class="result_text">
+                    <text>不赞成：</text><text>{{item.failed}}票</text>
+                </view>
+            </view>
+        </view>
+        <view class="recollections">
+            <image mode="widthFix" src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fxjyilankj.lehouwu.net%2Feditor%2Fattached%2Fimage%2F20180316%2F20180316110813_76310.png&refer=http%3A%2F%2Fxjyilankj.lehouwu.net&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1648216873&t=2e2fc63c6405ad1ad482db5cab51e633"></image>
+        </view>
+    </view>
+</view>

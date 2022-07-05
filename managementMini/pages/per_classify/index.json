@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "Introduce":"../../components/Introduce/Introduce",
+    "SearchInput":"../../components/SearchInput/SearchInput"
+  }
+}

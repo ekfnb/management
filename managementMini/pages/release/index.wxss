@@ -1,0 +1,60 @@
+.main{
+    width: 95%;
+    margin: 0 auto;
+}
+.nav_content{
+    display: flex;
+    margin: 20rpx auto;
+}
+.nav_content navigator{
+    flex: 1;
+    text-align: center;
+    margin: 0 10rpx;
+    background-color: var(--themeColor);
+    color: #fff;
+    padding: 5rpx;
+}
+.pro_title{
+    font-size: 35rpx;
+    text-align: center;
+    color: var(--themeColor);
+    margin: 15rpx auto;
+}
+.title_img image{
+    border-radius: 3%;
+}
+.project_content{
+    margin: 0 auto;
+}
+.project_list{
+    border-bottom: 1rpx solid #eee;
+    margin: 8rpx auto;
+    display: flex;
+    min-height: 180rpx;
+    padding: 15rpx;
+    border-radius: 15rpx;
+}
+.project-img{
+    flex: 2;
+}
+.project-img image{
+    width: 100%;
+}
+.project-title{
+    margin-left: 15rpx;
+    flex: 6;
+    position: relative;
+}
+.project-title text{
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+.dynamic-date{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font-size: 24rpx;
+    color: #666;
+}

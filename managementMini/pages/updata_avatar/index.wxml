@@ -1,0 +1,6 @@
+<view class="content">
+    <view class="user_pic">
+        <image mode="aspectFit" src="{{avatar !== ''?avatar:userInfo.user_pic}}"></image>
+    </view>
+    <button bindtap="uploadTap">更换头像</button>
+</view>

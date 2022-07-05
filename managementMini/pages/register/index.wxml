@@ -1,0 +1,24 @@
+<view class="regiser_title">
+    <view class="regiser_title">
+        <view >校园规划管理平台</view>
+        <view >请您注册</view>
+    </view>
+</view>
+<view class="regiser_form">
+    <view class="regiser_name">
+        <text class="username_reg" decode>用&nbsp;&nbsp;户&nbsp;名：</text><input class="username_regiser" type="text" bindinput="accountName" placeholder="请输入用户名"></input>
+    </view>
+    <view class="regiser_name">
+        <text class="username_reg" decode>帐&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号：</text><input class="username_regiser" type="text" bindinput="username" placeholder="请输入账号"></input>
+    </view>
+    <view class="regiser_name">
+        <text class="username_reg" decode>密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码：</text><input class="password_regiser" type="password" bindinput="password" placeholder="请输入密码"></input>
+    </view>
+    <view class="regiser_name">
+        <text class="username_reg" decode>确认密码：</text><input class="password_regiser" type="password" bindinput="confirmPwd" placeholder="再次输入密码"></input>
+    </view>
+    <view class="regiser_name">
+        <text class="username_reg" decode>邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;箱：</text><input class="username_regiser" type="text" bindinput="email" placeholder="请输入邮箱"></input>
+    </view>
+    <button class="regiserBut" bindtap="regiserBut"> 注册用户 </button>
+</view>

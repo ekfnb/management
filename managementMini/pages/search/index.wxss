@@ -1,0 +1,85 @@
+/* pages/search/index.wxss */
+.main{
+    width: 100%;
+}
+.query_nav{
+    height: 90rpx;
+    padding: 10rpx;
+    background-color: var(--themeColor);
+    display: flex;
+    margin-bottom: 10rpx;
+}
+.queryInput{
+    flex: 9;
+}
+.queryInput input{
+    border-radius: 15rpx;
+    background-color: #fff;
+    height: 70rpx;
+    padding-left: 25rpx;
+}
+.queryBut{
+    flex: 1;
+}
+.queryBut button{
+    background-color: var(--themeColor);
+    color: #fff;
+    font-size: 26rpx;
+    position: relative;
+}
+.queryBut button image{
+    width: 60rpx;
+    height: 60rpx;
+    position: absolute;
+    top:5rpx;
+    left: 20rpx;
+}
+/* 列表样式 */
+.content{
+    width: 95%;
+    display: flex;
+    /* margin: 15rpx auto; */
+    margin: 0 auto;
+    margin-bottom: 15rpx;
+    border-radius: 15rpx;
+    border-bottom: 1rpx solid #ccc;
+    min-height: 180rpx;
+    padding: 5rpx 15rpx;
+}
+.project_list{
+    flex: 2;
+}
+.project-img{
+    width: 100%;
+}
+.project-img image{
+    width: 100%;
+}
+.project-title{
+    flex: 7;
+    position: relative;
+    height: auto;
+}
+.project_type{
+    position: absolute;
+    top:0;
+    left: 10rpx;
+    color: var(--themeColor);
+    font-size: 32rpx;
+}
+.project_name{
+    position: absolute;
+    left: 10rpx;
+    top:50rpx;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+.project-date{
+    position: absolute;
+    right: 10rpx;
+    bottom: 0;
+    color: #ccc;
+    font-size: 24rpx;
+}

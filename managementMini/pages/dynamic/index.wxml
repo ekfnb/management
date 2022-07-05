@@ -1,0 +1,13 @@
+<SearchInput></SearchInput>
+<navigator class="dynamic-main"
+ wx:for="{{dynamicList}}"
+ wx:key="id"
+ url="../../pages/project_details/index?cid={{item.id}}">
+    <view class="dynamic-img">
+        <image mode="widthFix" wx:if="{{item.user_pic}}" src="{{item.user_pic}}"></image>
+    </view>
+    <view class="dynamic-title">
+        <text>{{item.name}}（{{item.alias}}）</text>
+        <view class="dynamic-date">{{item.dates}}</view>
+    </view>
+</navigator> 

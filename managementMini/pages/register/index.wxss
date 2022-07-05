@@ -1,0 +1,42 @@
+.regiser_title{
+  width: 100%;
+  height: 300rpx;
+  padding-top: 50rpx;
+  display: block;
+  text-align: center;
+  font-size: 60rpx;
+  background-color: var(--themeColor);
+  font-family:"楷体";
+  color: #fff;
+  border-bottom-left-radius:30%;
+  border-bottom-right-radius:30%;
+}
+.regiser_form{
+  width: 80%;
+  padding-top: 100rpx;
+  margin: 20rpx auto;
+}
+.regiser_name{
+  width: 80%;
+  display: flex;
+  margin: 0 auto;
+}
+.username_reg{
+  flex: 3.5;
+  font-size: 28rpx;
+  display: flex;
+  line-height: 80rpx;
+}
+.username_regiser,.password_regiser{
+  border-bottom: 2rpx solid #ccc;
+  flex: 8;
+  margin: 0 auto;
+  margin-top: 20rpx;
+}
+.regiserBut{
+  width: 70%;
+  font-size: 30rpx;
+  color: #fff;
+  background-color: var(--themeColor);
+  margin: 20rpx auto;
+}
